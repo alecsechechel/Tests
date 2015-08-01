@@ -22,12 +22,5 @@ class Math {
         return operator1 + operator2
     }
     
-    func sqr(operator1: Int) -> Int {
-        if operator1 >= 0 {
-            return operator1 * operator1
-        } else {
-            return 0
-        }
-    }
 }
 
