@@ -50,7 +50,7 @@ class XcodeServerTests: XCTestCase {
         XCTAssertEqual(num1 * num1, math.sqr(num1), "Error sqr")
         
         num1 = -2
-        XCTAssertEqual(0, math.sqr(num1), "Error sqr")
+        XCTAssertEqual(4, math.sqr(num1), "Error sqr")
     }
     
 }
