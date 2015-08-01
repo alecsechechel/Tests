@@ -19,7 +19,7 @@ class Math {
     }
     
     func divided(operator1: Int, operator2: Int) -> Int {
-        return operator1 + operator2
+        return operator1 / operator2
     }
     
 }
