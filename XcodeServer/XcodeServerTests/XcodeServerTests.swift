@@ -45,4 +45,12 @@ class XcodeServerTests: XCTestCase {
         XCTAssertEqual(num1 / num2, math.divided(num1, operator2: num2), "Error divided")
     }
     
+    func testSqrFunction() {
+        var num1 = 6
+        XCTAssertEqual(num1 * num2, math.sqr(num1), "Error sqr")
+        
+        num1 = -2
+        XCTAssertEqual(0, math.sqr(num1), "Error sqr")
+    }
+    
 }
