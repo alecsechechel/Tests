@@ -13,6 +13,8 @@
 		FAD04F611B6CB419005B9B9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD04F601B6CB419005B9B9C /* Images.xcassets */; };
 		FAD04F641B6CB419005B9B9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD04F621B6CB419005B9B9C /* LaunchScreen.xib */; };
 		FAD04F701B6CB419005B9B9C /* XcodeServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD04F6F1B6CB419005B9B9C /* XcodeServerTests.swift */; };
+		FAD04F7A1B6D0858005B9B9C /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD04F791B6D0858005B9B9C /* Math.swift */; };
+		FAD04F7B1B6D0863005B9B9C /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD04F791B6D0858005B9B9C /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		FAD04F691B6CB419005B9B9C /* XcodeServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD04F6E1B6CB419005B9B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD04F6F1B6CB419005B9B9C /* XcodeServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeServerTests.swift; sourceTree = "<group>"; };
+		FAD04F791B6D0858005B9B9C /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Math.swift; path = ../Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 			children = (
 				FAD04F591B6CB419005B9B9C /* AppDelegate.swift */,
 				FAD04F5B1B6CB419005B9B9C /* ViewController.swift */,
+				FAD04F791B6D0858005B9B9C /* Math.swift */,
 				FAD04F5D1B6CB419005B9B9C /* Main.storyboard */,
 				FAD04F601B6CB419005B9B9C /* Images.xcassets */,
 				FAD04F621B6CB419005B9B9C /* LaunchScreen.xib */,
@@ -214,6 +218,7 @@
 			files = (
 				FAD04F5C1B6CB419005B9B9C /* ViewController.swift in Sources */,
 				FAD04F5A1B6CB419005B9B9C /* AppDelegate.swift in Sources */,
+				FAD04F7A1B6D0858005B9B9C /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD04F701B6CB419005B9B9C /* XcodeServerTests.swift in Sources */,
+				FAD04F7B1B6D0863005B9B9C /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

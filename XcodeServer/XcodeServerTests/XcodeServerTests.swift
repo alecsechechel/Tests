@@ -11,8 +11,11 @@ import XCTest
 
 class XcodeServerTests: XCTestCase {
     
+    var math = Math()
+    
     override func setUp() {
         super.setUp()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -21,16 +24,11 @@ class XcodeServerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testAddFunction() {
+        let num1 = 5
+        let num2 = 6
+       
+        XCTAssertEqual(num1 + num2, math.add(num1, operator2: num2), "Error")
     }
     
 }
