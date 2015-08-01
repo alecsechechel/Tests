@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E2035B1E-3765-4713-AB97-D3D284C2AF7F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>XcodeServer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>CE44A9214AD2DEC73F01FAB96C1BD99F596A52CF</key>
 		<string>https://github.com/alecsechechel/Tests.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>XcodeServer/XcodeServer.xcodeproj/project.xcworkspace</string>
+	<string>XcodeServer/XcodeServer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CE44A9214AD2DEC73F01FAB96C1BD99F596A52CF</key>

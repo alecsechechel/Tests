@@ -31,4 +31,11 @@ class XcodeServerTests: XCTestCase {
         XCTAssertEqual(num1 + num2, math.add(num1, operator2: num2), "Error")
     }
     
+    func testAddMultiply() {
+        let num1 = 5
+        let num2 = 6
+        
+        XCTAssertEqual(num1 * num2, math.multiply(num1, operator2: num2), "Error")
+    }
+    
 }

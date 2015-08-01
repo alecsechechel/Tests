@@ -13,5 +13,9 @@ class Math {
     func add(operator1: Int, operator2: Int) -> Int {
         return operator1 + operator2
     }
+    
+    func multiply(operator1: Int, operator2: Int) -> Int {
+        return operator1 * operator2
+    }
 }
 
