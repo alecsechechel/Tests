@@ -28,14 +28,21 @@ class XcodeServerTests: XCTestCase {
         let num1 = 5
         let num2 = 6
        
-        XCTAssertEqual(num1 + num2, math.add(num1, operator2: num2), "Error")
+        XCTAssertEqual(num1 + num2, math.add(num1, operator2: num2), "Error add")
     }
     
-    func testAddMultiply() {
+    func testMultiplyFunction() {
         let num1 = 5
         let num2 = 6
         
-        XCTAssertEqual(num1 * num2, math.multiply(num1, operator2: num2), "Error")
+        XCTAssertEqual(num1 * num2, math.multiply(num1, operator2: num2), "Error multiply")
+    }
+    
+    func testDivededFunction() {
+        let num1 = 6
+        let num2 = 3
+        
+        XCTAssertEqual(num1 / num2, math.divided(num1, operator2: num2), "Error divided")
     }
     
 }

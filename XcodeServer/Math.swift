@@ -17,5 +17,9 @@ class Math {
     func multiply(operator1: Int, operator2: Int) -> Int {
         return operator1 * operator2
     }
+    
+    func divided(operator1: Int, operator2: Int) -> Int {
+        return operator1 + operator2
+    }
 }
 
