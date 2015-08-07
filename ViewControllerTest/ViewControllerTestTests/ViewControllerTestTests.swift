@@ -8,36 +8,66 @@
 
 import UIKit
 import XCTest
+import Quick
+import Nimble
+import ViewControllerTest
 
-
-
-class ViewControllerTestTests: XCTestCase {
-    
-    var viewController: ViewController!
-    
-    override func setUp() {
-        super.setUp()
+class ViewControllerTestTest: QuickSpec {
+ 
+    override func spec() {
+        var viewController: ViewController!
+        beforeEach {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let navigationController : UINavigationController? = storyboard.instantiateInitialViewController() as? UINavigationController
+            viewController =
+                storyboard.instantiateViewControllerWithIdentifier(
+                    "ViewControllerID") as! ViewController
+            UIApplication.sharedApplication().keyWindow!.rootViewController = viewController
+            
+            // The One Weird Trick!
+            XCTAssertNotNil(navigationController?.view)
+            XCTAssertNotNil(viewController.view)
+//            let _ = navigationController.view
+            let _ = viewController.view
+        }
         
-        let storyboard = UIStoryboard(name: "Main",
-            bundle: NSBundle.mainBundle())
-        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-        let rtest = navigationController.topViewController as! ViewController
-        viewController = navigationController.topViewController as! ViewController
+        describe(".viewDidLoad()") {
+            beforeEach {
+                // Method #1: Access the view to trigger BananaViewController.viewDidLoad().
+            }
+            
+            it("sets the banana count label to zero") {
+                // Since the label is only initialized when the view is loaded, this
+                // would fail if we didn't access the view in the `beforeEach` above.
+                expect(viewController.label.text).to(equal("0"))
+            }
+        }
         
-        UIApplication.sharedApplication().keyWindow!.rootViewController = viewController
+        describe("the view") {
+            beforeEach {
+                // Method #2: Triggers .viewDidLoad(), .viewWillAppear(), and .viewDidAppear() events.
+                viewController.beginAppearanceTransition(true, animated: false)
+                viewController.endAppearanceTransition()
+            }
+            // ...
+        }
         
-        // The One Weird Trick!
-        let _ = navigationController.view
-        let _ = viewController.view
+        describe(".viewWillDisappear()") {
+            beforeEach {
+                // Method #3: Directly call the lifecycle event.
+                viewController.viewWillDisappear(false)
+            }
+            // ...
+        }
+        
+        describe("the 'more bananas' button") {
+            it("increments the banana count label when tapped") {
+                
+                viewController.addButton.sendActionsForControlEvents(
+                    UIControlEvents.TouchUpInside)
+                println(viewController.label.text)
+                expect(viewController.label.text).to(equal("10"))
+            }
+        }
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testViewControllerViewExists() {
-        XCTAssertNotNil(viewController.view, "ViewController should contain a view")
-    }
-    
 }
