@@ -27,7 +27,7 @@ class ViewControllerTestTest: QuickSpec {
             // The One Weird Trick!
             XCTAssertNotNil(navigationController?.view)
             XCTAssertNotNil(viewController.view)
-//            let _ = navigationController.view
+            let _ = navigationController!.view
             let _ = viewController.view
         }
         

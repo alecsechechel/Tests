@@ -1,0 +1,6 @@
+framework module Pods_ViewControllerTestTests {
+  umbrella header "Pods-ViewControllerTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

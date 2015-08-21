@@ -1,0 +1,11 @@
+platform :ios, "8.0"
+use_frameworks!
+
+def testing_pods
+    pod 'Quick', '~> 0.3.0'
+    pod 'Nimble', '~> 1.0.0'
+end
+
+target 'ViewControllerTestTests' do
+    testing_pods
+end
