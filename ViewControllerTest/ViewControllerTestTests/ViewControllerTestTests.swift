@@ -19,9 +19,7 @@ class ViewControllerTestTest: QuickSpec {
         beforeEach {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let navigationController : UINavigationController? = storyboard.instantiateInitialViewController() as? UINavigationController
-            viewController =
-                storyboard.instantiateViewControllerWithIdentifier(
-                    "ViewControllerID") as! ViewController
+            viewController = storyboard.instantiateViewControllerWithIdentifier("ViewControllerID") as! ViewController
             UIApplication.sharedApplication().keyWindow!.rootViewController = viewController
             
             // The One Weird Trick!
@@ -36,7 +34,7 @@ class ViewControllerTestTest: QuickSpec {
                 // Method #1: Access the view to trigger BananaViewController.viewDidLoad().
             }
             
-            it("sets the banana count label to zero") {
+            it("sets the count label to zero") {
                 // Since the label is only initialized when the view is loaded, this
                 // would fail if we didn't access the view in the `beforeEach` above.
                 expect(viewController.label.text).to(equal("0"))
@@ -60,13 +58,10 @@ class ViewControllerTestTest: QuickSpec {
             // ...
         }
         
-        describe("the 'more bananas' button") {
-            it("increments the banana count label when tapped") {
-                
-                viewController.addButton.sendActionsForControlEvents(
-                    UIControlEvents.TouchUpInside)
-                println(viewController.label.text)
-                expect(viewController.label.text).to(equal("10"))
+        describe("the 'add' button") {
+            it("increments the count label when tapped") {
+                viewController.addButton.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
+                expect(viewController.label.text).to(equal("1"))
             }
         }
     }
